@@ -12,7 +12,6 @@ exports.assetsPath = function (_path) {
   return path.posix.join(assetsSubDirectory, _path)
 }
 
-
 // cssloader兼容各种预处理语言(less|sass|scss|stylus)
 exports.cssLoaders = function (options) {
   options = options || {}
@@ -32,7 +31,7 @@ exports.cssLoaders = function (options) {
   }
 
   // webpack4.0版本以上采用MiniCssExtractPlugin 而不使用extract-text-webpack-plugin
-  function generateLoaders(loader, loaderOptions) {
+  function generateLoaders (loader, loaderOptions) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
 
     if (loader) {
@@ -78,7 +77,7 @@ exports.styleLoaders = function (options) {
   return output
 }
 
-//创建友好错误提示的格式
+// 创建友好错误提示的格式
 exports.createNotifierCallback = () => {
   const notifier = require('node-notifier')
 
@@ -91,7 +90,7 @@ exports.createNotifierCallback = () => {
     notifier.notify({
       title: packageConfig.name,
       message: severity + ': ' + error.name,
-      subtitle: filename || '',
+      subtitle: filename || ''
     })
   }
 }

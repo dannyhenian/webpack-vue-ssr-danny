@@ -58,7 +58,6 @@ if (process.env.NODE_ENV === 'production') {
   )
 }
 
-
 const render = async (ctx, next) => {
   ctx.set('Content-Type', 'text/html')
 
@@ -98,7 +97,6 @@ const render = async (ctx, next) => {
   } catch (error) {
     handleError(error)
   }
-
 }
 
 router.get('*', render)
@@ -106,8 +104,6 @@ router.get('*', render)
 app
   .use(router.routes())
   .use(router.allowedMethods())
-
-
 
 const port = process.env.PORT || 3000
 app.listen(port, () => {

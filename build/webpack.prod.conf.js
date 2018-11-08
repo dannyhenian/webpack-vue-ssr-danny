@@ -1,3 +1,4 @@
+/* eslint-disable */
 const path = require('path')
 const utils = require('./utils')
 const webpack = require('webpack')
@@ -31,7 +32,7 @@ const pordWebpackConfig = merge(baseWebpackConfig, {
     }),
     //  当vendor模块不再改变时, 根据模块的相对路径生成一个四位数的hash作为模块id
     new webpack.HashedModuleIdsPlugin()
-  ],
+  ]
   // 优化相关, 暂时占个位置
   // optimization: {
   //   splitChunks: {

@@ -3,3 +3,4 @@ dist/
 server-dist/
 server-build
 .DS_Store
+.idea

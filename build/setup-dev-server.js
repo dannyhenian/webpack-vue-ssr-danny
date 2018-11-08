@@ -21,11 +21,10 @@ const readFile = (fs, file) => {
   }
 }
 
-module.exports = function setupDevServer(app, templatePath, cb) {
+module.exports = function setupDevServer (app, templatePath, cb) {
   let bundle
   let template
   let clientManifest
-
 
   // 监听改变后更新函数
   const update = () => {
@@ -82,6 +81,4 @@ module.exports = function setupDevServer(app, templatePath, cb) {
     bundle = JSON.parse(readFile(mfs, 'vue-ssr-server-bundle.json'))
     update()
   })
-
 }
-

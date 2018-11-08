@@ -14,7 +14,8 @@ const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
-  include: [resolve('src'), resolve('server')],
+  // include: [resolve('src'), resolve('server')],
+  include: [path.resolve(__dirname, '../src'), path.resolve(__dirname, '../server')],
   options: {
     // 更友好、更详细的提示
     formatter: require('eslint-friendly-formatter'),
@@ -24,7 +25,9 @@ const createLintingRule = () => ({
 })
 
 module.exports = {
-  entry: resolve('src/entry-client.js'),
+  context: path.resolve(__dirname, '../'),
+  // entry: resolve('src/entry-client.js'),
+  entry: './src/entry-client.js',
   output: {
     path: config.build.assetsRoot,
     filename: '[name].js',

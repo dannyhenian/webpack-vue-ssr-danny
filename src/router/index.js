@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-const A = () => import('components/A/A')
-const B = () => import('components/B/B')
+const A = () => import('../components/A/A.vue')
+const B = () => import('../components/B/B.vue')
 
 Vue.use(Router)
 

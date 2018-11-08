@@ -27,6 +27,6 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     productionSourceMap: false,
-    devtool: '#source-map',
+    devtool: '#source-map'
   }
 }
