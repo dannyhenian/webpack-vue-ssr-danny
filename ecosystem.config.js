@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
-    name: 'API',
-    script: 'app.js',
+    name: 'vue-ssr-danny',
+    script: 'server/index.js',
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
@@ -19,12 +19,12 @@ module.exports = {
 
   deploy: {
     production: {
-      user: 'node',
+      user: 'Danny',
       host: '212.83.163.1',
       ref: 'origin/master',
-      repo: 'git@github.com:repo.git',
-      path: '/var/www/production',
-      'post-deploy': 'npm install && pm2 reload ecosystem.config.js --env production'
+      repo: 'git@github.com:dannyhenian/webpack-vue-ssr-danny.git',
+      path: '/home/danny/vue-ssr-demo',
+      'post-deploy': 'cnpm install && pm2 reload ecosystem.config.js --env production'
     }
   }
 }
