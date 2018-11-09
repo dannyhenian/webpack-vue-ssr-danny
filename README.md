@@ -1,12 +1,8 @@
 # 基于webpack4构建的vue应用（SSR/SPA）
 
-📦 此项目是通过webpack搭建了vue单页面应用以及vue服务端渲染应用。项目只是作为学习webpack以及SSR，并不足以强大能够用于线上项目。
 
-> 看完整代码可以查找对应Tag。
-
-## webpack-SPA
-
-[完整代码](https://github.com/lhz960904/webpack-vue-ssr/tree/webpack4-SPA)
+pm2 start ecosystem.config.js # uses variables from `env`
+pm2 start ecosystem.config.js --env production # uses variables from `env_production`
 
 #### Usage:
 
@@ -21,12 +17,6 @@ npm run build # 线上构建
 
 
 
-
-## webpack-SSR
-
-[完整代码](https://github.com/lhz960904/webpack-vue-ssr/tree/webpack-SSR)
-
-#### Usage:
 
 ```shell
 npm install
